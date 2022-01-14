@@ -1,13 +1,36 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+    body {
+        margin: 0;            /* Reset default margin */
+    }
+    iframe {
+        display: block;       /* iframes are inline by default */
+        background: #000;
+        border: none;         /* Reset default border */
+        height: 100vh;        /* Viewport-relative units */
+        width: 100vw;
+    }
+    </style>
 <body>
-    <h1>THIS IS TEST</h1>
-    
+<iframe id="youtube" src="https://youtube.com/embed/iEfVgIcYNG8?autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
 </body>
+
+<script>
+function querySt(ji) {
+
+    hu = window.location.search.substring(1);
+    gy = hu.split("&");
+
+    for (i=0;i<gy.length;i++) {
+        ft = gy[i].split("=");
+        if (ft[0] == ji) {
+            return ft[1];
+        }
+    }
+}
+var koko = querySt("koko");
+console.log(koko);
+document.getElementById('youtube').src = koko;
+</script>
 </html>
