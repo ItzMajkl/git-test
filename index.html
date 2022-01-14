@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <style type="text/css">
     body {
         margin: 0;            /* Reset default margin */
@@ -13,12 +13,14 @@
         height: 100vh;        /* Viewport-relative units */
         width: 100vw;
     }
-    </style>
-  </head>
+  </style>
+  <title></title>
+</head>
 <body>
-  
+  <iframe id="youtube" src="https://youtube.com/embed/iEfVgIcYNG8?autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%" name="youtube"></iframe> 
   <script>
-function querySt(ji) {
+
+  function querySt(ji) {
 
     hu = window.location.search.substring(1);
     gy = hu.split("&");
@@ -29,17 +31,10 @@ function querySt(ji) {
             return ft[1];
         }
     }
-}
-var koko = querySt("koko");
-console.log(koko);
-document.getElementById('youtube').src = koko;
-</script>
-  
-<iframe id="youtube" src="https://youtube.com/embed/iEfVgIcYNG8?autoplay=1" allow="autoplay; allowfullscreen" allowfullscreen height="100%" width="100%"></iframe>
+  }
+  var koko = querySt("koko");
+  console.log(koko);
+  document.getElementById('youtube').src = koko;
+  </script>
 </body>
-  
-
-  
-
-
 </html>
